@@ -1,0 +1,6 @@
+.git
+.agents
+.codex
+desktop.ini
+node_modules
+npm-debug.log
