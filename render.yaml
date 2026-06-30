@@ -1,0 +1,13 @@
+services:
+  - type: web
+    runtime: node
+    name: multibloxd
+    plan: free
+    numInstances: 1
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: MAX_CLIENTS
+        value: "500"
